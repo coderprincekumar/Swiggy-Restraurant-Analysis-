@@ -1,0 +1,41 @@
+# Swiggy restaurants across India: five questions
+
+Analysis of 139,321 restaurant listings in 581 cities, from a Swiggy dataset file dated February 2024. Built with Python and pandas.
+
+## Kanpur has the most listings, but the top ten cities are effectively tied
+
+Kanpur leads with 2,000 restaurants, yet ten cities sit between 1,974 and 2,000. Eleven cities land at about 1,900 or more, which points to a cap of roughly 2,000 listings per city in how the data was collected. The data can't show which city really has the most.
+
+Bars start at zero. Differences between these cities are too small to be meaningful.
+
+## Chinese is the most common cuisine, offered by about one in four restaurants
+
+Chinese appears in 37,527 listings (26.9%), followed by North Indian at 20.6% and Indian at 16.6%. Restaurants list several cuisines each, so shares add up to more than 100%. If you count only each restaurant's first-listed cuisine, North Indian (20,154) edges ahead of Chinese (18,844).
+
+## Domino's has the most branches: 209, one in each of 209 cities
+
+Domino's, KFC and Pizza Hut are the three largest chains, each with about 200 listings. Counts below match restaurant names exactly. Brands that list under several names, such as Baskin Robbins, are split up here; the Baskin Robbins variants I searched for add up to 379 listings.
+
+## Among larger cities, Manipal, Rajkot and Kochi are rated highest
+
+Muktsar tops the table at 4.31, but it has exactly 50 restaurants, so I wouldn't lean on it. Manipal (234 restaurants) and Rajkot (965) are the strongest cities with more data behind them. Bhiwadi and Allahabad rate lowest.
+
+Highest average rating
+
+Lowest average rating
+
+Bars start at a rating of 3.0 to make small gaps visible, so bar length exaggerates the differences.
+
+Cities with 50+ restaurants and at least 30 rated listings. Unrated listings (about 24%) are excluded.
+
+## Central Goa is the most expensive city to eat in; Sirsa is the cheapest
+
+Median cost for two is ₹400 in Central Goa, against ₹150 in Sirsa. Across all listings the median is ₹250. I used medians because a few bad entries (the largest price is ₹199,246) distort averages.
+
+Most expensive, median cost for two
+
+Cheapest, median cost for two
+
+Cities with 50+ restaurants. Bars start at zero.
+
+**Method.** Removed 1,336 exact duplicate rows. Parsed prices from text like "₹250 for two" and treated "--" ratings as missing. Split multi-cuisine listings to count each cuisine. 390 of 581 cities have 50+ restaurants. Chains are counted by exact restaurant name.
